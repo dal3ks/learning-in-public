@@ -90,14 +90,18 @@ while condition:
 ### list comprehension
 ```python
 result = [item for item in list if condition]
+eg:
+[number for number in numbers if number > 5]
 ```
 
 ### slicing
 ```python
-string[0:3]   # first 3 characters
-string[-3:]   # last 3 characters
+string[0:3]    # first 3 characters
+string[-3:]    # last 3 characters
+string[2:5]    # middle chunk (index 2 up to but not including 5)
+string[::2]    # every 2nd character
+string[::-1]   # reverse the string
 ```
-
 ### class
 ```python
 class MyClass:
@@ -116,3 +120,37 @@ class MyClass:
 | string | `str(data)` |
 | list | `list(data)` |
 | dictionary | `dict(data)` |
+
+### lists
+```python
+my_list = []              # empty list
+my_list.append(item)      # add single item
+my_list.extend([1,2,3])   # add multiple items
+my_list.pop()             # remove and return last item
+my_list.sort()            # sort in place
+my_list.reverse()         # reverse in place
+my_list.clear()           # remove all items
+my_list.copy()            # make a copy
+my_list.count(item)       # count occurrences of item
+len(my_list)              # number of items
+my_list[0:3]              # slicing works same as strings
+```
+
+### dictionaries
+```python
+my_dict = {}                    # empty dictionary
+my_dict[key] = value            # add or update a value
+my_dict[key]                    # get a value by key
+my_dict.values()                # get all values
+my_dict.keys()                  # get all keys
+my_dict.items()                 # get all key-value pairs
+
+# nested dictionary
+nested = {
+    "key1": {
+        "subkey1": "value1",
+        "subkey2": "value2"
+    }
+}
+nested["key1"]["subkey1"]       # access nested value
+```
